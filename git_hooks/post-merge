@@ -1,0 +1,14 @@
+#!/usr/bin/python
+from aux_fns import update_conda_env
+
+
+def main():
+    print("Running post-merge hook script")
+
+    update_conda_env()
+
+    print("Finished running post-merge hook script")
+
+
+if __name__ == "__main__":
+    main()

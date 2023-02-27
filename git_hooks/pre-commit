@@ -1,0 +1,26 @@
+#!/usr/bin/python
+from aux_fns import (
+    format_files_ending,
+    delete_py_versions_of_deleted_notebooks,
+    rename_py_versions_of_renamed_notebooks,
+    make_py_versions_of_notebooks,
+    update_conda_env_file,
+)
+
+
+def main():
+    print("Running pre-commit hook script")
+
+    format_files_ending([".py", ".ipynb"])
+
+    delete_py_versions_of_deleted_notebooks()
+    rename_py_versions_of_renamed_notebooks()
+    make_py_versions_of_notebooks()
+
+    update_conda_env_file()
+
+    print("Finished running pre-commit hook script")
+
+
+if __name__ == "__main__":
+    main()
