@@ -51,11 +51,6 @@ Enable plotting by setting Plotting = True within the clean.ipynb and the window
 
 ### Expected folder structure for local directory
 
-An environment variable named 'EoH' within the code points to the folder which contains the EOH_Data_Local folder.
-
-Once the EOH_Data_Local directory is created, folders will be created automatically when running the script.
-
-
 | Level 0    | Level 1                     | Level 2                | Level 3                | Level 4                | Notes                                                 |
 |------------|-----------------------------|------------------------|------------------------|------------------------|-------------------------------------------------------|
 | processed\ | binned_heating_temperature\ | all_flow_temperatures\ |                        |                        |                                                       |
