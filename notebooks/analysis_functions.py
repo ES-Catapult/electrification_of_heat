@@ -68,38 +68,6 @@ def reformat_SPF_to_long(data: pd.DataFrame, cold_analysis: bool) -> pd.DataFram
 
     return homes_output
 
-
-def add_anonymised_ids(data: pd.DataFrame, file_path: str) -> pd.DataFrame:
-    """Gets the anonymised home ids and joins them onto the SPF_data by home
-
-    Args:
-        data (pd.DataFrame): SPF_data per home and SPF_type
-        file_path (str): file path for the home anonymisation lookup
-    Returns:
-        pd.DataFrame: DataFrame with relevant fields added
-    """
-    anonymised_ids = pd.read_excel(
-        "S:\Projects\Electrification of Heat\WP3 - Data Collection & Co-ordination\Property Number Anonymisation.xlsx"
-    )
-
-    data["Property_ID"] = data["Property_ID"].astype(str)
-    anonymised_ids["House_ID"] = anonymised_ids["House_ID"].astype(str)
-
-    data = data.merge(
-        anonymised_ids,
-        how="left",
-        left_on="Property_ID",
-        right_on="House_ID",
-        copy=False,
-        suffixes=(None, "_y"),
-    )
-
-    data = data.loc[:, ~data.columns.str.endswith("_y")]
-    data = data.drop(["House_ID"], axis=1)
-
-    return data
-
-
 def stats_by_hp_and_SPF_type(data: pd.DataFrame, by: str = "HP_Type", rounding: int = 2) -> pd.DataFrame:
     """Provides a variety of stats for SPF_value by SPF_type and another specified split_by type.
     Includes 95% confidence interval for the mean and IQR for the median.
