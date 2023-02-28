@@ -29,6 +29,10 @@ Detail on the cleaning process can be found in [this document](reports/Cleansing
 
 To run the seasonal_performance_calculations.ipynb file, you will need a free login for the usmart platform to be able to access the dataset https://usmart.io/org/esc/dataset/view-edit?datasetGUID=6e1432df-1617-4324-b9aa-b247ba095267 which is required for the analysis. You will also need to set environment variables for your USMART_KEY_ID and USMART_KEY_SECRET, these keys can be found in your profile in usmart.
 
+In the clean.ipynb file, a file that produces temperature statistics called temperature_stats.csv takes a few hours to produce. Once this file has been created, the code can be commented out to save time if the script needs re-running. Reference to this can be found on the low level process flow.
+
+Enable plotting by setting Plotting = True within the clean.ipynb and the window_select_and_calculations.ipynb files will produce a variety of plots within your folder. Although useful, this can add a few hours to the run time. Reference to this can be found on the low level process flow.
+
 ### Steps to move from raw data to analysis outputs
 
 0.  Run the following commands to create a conda environment called EoH and to install relevant packages.
