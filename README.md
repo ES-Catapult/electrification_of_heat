@@ -31,7 +31,7 @@ To run the seasonal_performance_calculations.ipynb file, you will need a free lo
 
 In the clean.ipynb file, a file that produces temperature statistics called temperature_stats.csv takes a few hours to produce. Once this file has been created, the code can be commented out to save time if the script needs re-running. Reference to this can be found on the low level process flow.
 
-Enable plotting by setting Plotting = True within the clean.ipynb and the window_select_and_calculations.ipynb files will produce a variety of plots within your folder. Although useful, this can add a few hours to the run time. Reference to this can be found on the low level process flow.
+Enabling plotting by setting Plotting = True within the clean.ipynb and the window_select_and_calculations.ipynb files will produce a variety of plots within your folder. Although useful, this can add a few hours to the run time. Reference to this can be found on the low level process flow.
 
 ### Steps to move from raw data to analysis outputs
 
