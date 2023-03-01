@@ -7,8 +7,9 @@ dependencies:
   - pandas
   - requests
   - scikit-learn
-  - pyarrow
   - ruptures
+  - pyarrow
+  - statsmodels
   - pydotplus
   - plotly-orca
   - plotly
