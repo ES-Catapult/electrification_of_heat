@@ -1,7 +1,4 @@
-from audioop import avg
-from calendar import month
 import pandas as pd
-from sklearn.utils import resample
 import qa_functions as qa
 import numpy as np
 from typing import Tuple
