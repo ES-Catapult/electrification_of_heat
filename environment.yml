@@ -7,8 +7,10 @@ dependencies:
   - pandas
   - requests
   - scikit-learn
+  - nbformat
   - ruptures
   - pyarrow
+  - nbformat>=4.2.0
   - statsmodels
   - pydotplus
   - plotly-orca
